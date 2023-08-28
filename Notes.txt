@@ -20,3 +20,12 @@ npx create-react-app client
 cd client; npm start
 
 spring data
+
+
+	"build": {
+		"dockerfile": "../Dockerfile",
+		"args": {
+			// set devcontainer-cli arg for Dockerfile
+			"devcontainercli": "true"
+		}
+	}
