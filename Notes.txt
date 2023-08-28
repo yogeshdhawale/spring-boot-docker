@@ -16,3 +16,7 @@ node.js
 npm --version
 
 npx create-react-app client
+
+cd client; npm start
+
+spring data
