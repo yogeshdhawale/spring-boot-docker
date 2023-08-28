@@ -1,0 +1,18 @@
+
+
+spring boot intializr
+	get zip file for initial project 
+spring.io/projects/spring-boot
+
+maven
+java
+com.crm
+crm 
+
+deps
+	rest repos, jpa, h2, lombok
+node.js
+
+npm --version
+
+npx create-react-app client
