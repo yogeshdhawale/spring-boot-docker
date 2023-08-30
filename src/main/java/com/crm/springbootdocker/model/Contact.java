@@ -4,22 +4,36 @@ import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Entity;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Entity
+@NoArgsConstructor
 public class Contact {
+
     private @Id @GeneratedValue Long id;
-    private String firstName;
-    private String lastName;
-    private String email;
 
-    //private Contact() {}
+    public String firstName;
+    public String lastName;
+    public String email;
 
-    public Contact(String name, String lname, String eName) {
+    public Contact(String firstName, String lastName, String email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+    }
 
-        this.firstName = name;
-        this.lastName = lname;
-        this.email = eName;
+    public String toString() {
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            return mapper.writeValueAsString(this);
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+        return "{}";
     }
 }
