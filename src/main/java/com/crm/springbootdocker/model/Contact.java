@@ -15,11 +15,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Contact {
 
-    private @Id @GeneratedValue Long id;
+    @Id @GeneratedValue private Long id;
 
-    public String firstName;
-    public String lastName;
-    public String email;
+    private String firstName;
+    private String lastName;
+    private String email;
 
     public Contact(String firstName, String lastName, String email) {
         this.firstName = firstName;

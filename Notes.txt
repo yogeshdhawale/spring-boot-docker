@@ -6,8 +6,7 @@ spring.io/projects/spring-boot
 
 maven
 java
-com.crm
-crm 
+
 
 deps
 	rest repos, jpa, h2, lombok

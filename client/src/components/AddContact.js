@@ -28,9 +28,10 @@ export default class AddContact extends Component {
 
         return (
             <div className="row" onSubmit={this.submitContact.bind(this)}>
-                <form className="col s12">
+                <form className="col s6">
                     <div className="row">
                         <div className="input-field col s6">
+                            <i class="material-icons prefix">account_circle</i>
                             <input ref="firstName" type="text" className="validate" />
                             <label htmlFor="firstName">First Name</label>
                         </div>
@@ -40,9 +41,12 @@ export default class AddContact extends Component {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="input-field col s12">
+                        <div className="input-field col s6">
+                        <i class="material-icons prefix">email</i>
                             <input ref="email" type="email" className="validate" />
                             <label htmlFor="email">Email</label>
+                            <span class="helper-text" data-error="Invalid" data-success="Valid">abc@xyz.com</span>
+
                         </div>
                     </div>
 
