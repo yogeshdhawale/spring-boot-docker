@@ -14,20 +14,21 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+//@CrossOrigin(origins = "${client.url}")
 
 @RestController
 @RequestMapping("/api")
 @CrossOrigin(origins = "http://localhost:3000")
 class ContactController {
-    private ContactService service;
+    private ContactService service = new ContactService();
 
     public ContactController(ContactRepo contactRepo) {
-        service.setRepo(contactRepo);
+        this.service.setRepo(contactRepo);
     }
 
     @GetMapping("/contacts")
-    Collection<Contact> contacts() {
-        return service.getAllContacts();
+    ResponseEntity<Collection<Contact>> contacts() {
+        return ResponseEntity.ok().body(service.getAllContacts());
     }
 
     @GetMapping("/contacts/{id}")
@@ -35,7 +36,7 @@ class ContactController {
         Contact res = service.getByID(id);
 
         if (res == null) {
-        return ResponseEntity.notFound().build();           
+            return ResponseEntity.notFound().build();
         }
         return ResponseEntity.ok().body(res);
     }

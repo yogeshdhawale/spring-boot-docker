@@ -36,3 +36,9 @@ http://localhost:8080/api
 
 https://materializecss.com/text-inputs.html
 
+
+
+npm config set legacy-peer-deps true
+npm i
+
+npm install @material-ui/core

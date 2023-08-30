@@ -31,7 +31,7 @@ export default class AddContact extends Component {
                 <form className="col s6">
                     <div className="row">
                         <div className="input-field col s6">
-                            <i class="material-icons prefix">account_circle</i>
+                            <i className="material-icons prefix">account_circle</i>
                             <input ref="firstName" type="text" className="validate" />
                             <label htmlFor="firstName">First Name</label>
                         </div>
@@ -42,10 +42,10 @@ export default class AddContact extends Component {
                     </div>
                     <div className="row">
                         <div className="input-field col s6">
-                        <i class="material-icons prefix">email</i>
+                            <i className="material-icons prefix">email</i>
                             <input ref="email" type="email" className="validate" />
                             <label htmlFor="email">Email</label>
-                            <span class="helper-text" data-error="Invalid" data-success="Valid">abc@xyz.com</span>
+                            <span className="helper-text" data-error="Invalid" data-success="Valid">abc@xyz.com</span>
 
                         </div>
                     </div>

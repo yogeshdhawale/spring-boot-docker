@@ -5,6 +5,13 @@ import java.util.Collection;
 public class ContactService {
     private ContactRepo contactRepo;
 
+    public ContactService() {
+    }
+
+    public ContactRepo getRepo() {
+        return contactRepo;
+    }
+
     public void setRepo(ContactRepo repo) {
         contactRepo = repo;
     }

@@ -15,7 +15,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Contact {
 
-    @Id @GeneratedValue private Long id;
+    @Id
+    @GeneratedValue
+    private Long id;
 
     private String firstName;
     private String lastName;
